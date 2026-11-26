@@ -1,0 +1,22 @@
+BOT TRADER SWING MULTI — E8.4.0-dev2
+
+Base: E8.3.9 source working tree, copied to a separate E8.4.0 development directory.
+Original E8.3.9 source tree and ZIP files are not modified.
+
+Current app version: 8.4.0-dev2 (development build label in config.py).
+Snapshot schema: 8.4.0.
+Primary UI: exactly 3 tabs (source and regression tests).
+
+Validation in current working environment:
+- pytest: 150 passed.
+- compileall app.py config.py modules tests: passed.
+- Streamlit runtime: NOT VERIFIED; Streamlit is not installed in this environment.
+- Formula Registry: 28 entries; all remain PENDING_INDEPENDENT_VALIDATION.
+- Selected independent arithmetic fixtures: SMA20, Bollinger Bands, CLV, RVOL20, OBV, Position Sizing, flat-window Stochastic.
+- Walk-forward: chronological train/validation/test folds; fold capital/position continuity is not implemented.
+- Corporate Actions and verified event calendar: not integrated.
+- Execution: OHLCV approximation, not order-book simulation.
+
+Release status: DEVELOPMENT / NOT ACCEPTED FOR LIVE TRADING.
+No ZIP created. No broker connection or automatic order execution.
+See docs/CHANGELOG_E8.4.0-dev2.md and docs/ARCHITECTURE_E8.4_SPEC.md.
